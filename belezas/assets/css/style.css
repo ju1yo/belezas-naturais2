@@ -1,0 +1,379 @@
+@import url('https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jacques+Francois&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+/*INICIO ÁREA MENU*/
+.menu-space{
+    width: 100%;
+}
+.menu-principal{
+    padding: 50px;
+    height: 70px;
+    background-color: #FF9500;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+}
+.menu-lista{
+    display: flex;
+    list-style-type: none;
+}
+.menu-link{
+    text-decoration: none;
+    margin-top: -10px;
+    margin-left: 200px;
+}
+.menu-item{
+    text-align: center;
+    padding: 25px;
+    width: 250px;
+    border-radius: 70px;
+    color: #fff;
+    font-family: "Jaro", sans-serif;
+    font-weight: 400;
+    font-size: 30px;
+    background-color: #FF6200;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+}
+.menu-item:hover{
+    background-color: #fff;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+    color: #FF6200;
+    transition: 0.9s;
+}
+/*FIM ÁREA MENU*/
+
+/*pg marrocos*/
+
+/*INÍCIO DA ÁREA PRINCIPAL*/
+
+/*ESTILO DE DINAMICA DA IMAGEM */
+.image-container {
+    position: relative;
+    display: inline-block;
+}
+
+.image {
+    width: 1000px;
+    height: 400px;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 30px;
+    width: 1000px;
+    height: 400px;
+    background-color: #FF6200;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+}
+
+.curiosity-text {
+    color: white;
+    font-size: 20px;
+    text-align: center;
+}
+/*FIM DO ESTILO DE DINAMICA DA IMAGEM */
+
+/*SEÇÃO SAARA*/
+.saara-post{
+    width: 100%;
+    height: 920px;
+    background-image: url('/assets/images/saara.png');
+}
+.saara-post h1{
+    text-align: center;
+    font-size: 80px;
+    font-family: "Jacques Francois", serif;
+    font-weight: 400;
+    padding-top: 350px;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+.saara-content{
+    width: 95%;
+    margin-left: 30px;
+    height: 2000px;
+    background-color: #fff4e5;
+}
+.saara-text{
+    margin-left: 130px;
+    width: 1000px;
+    height: 400px;
+}
+.saara-text p{
+    padding-top: 30px;
+    text-indent: 1.25cm;
+    text-align: justify;
+    align-items: center;
+    font-family: "Inter", sans-serif;
+    color: #000;
+    font-weight: bold;
+    font-size: 20px;
+}
+.saara-text img{
+    padding-top: 30px;
+    width: 1000px;
+    height: 400px;
+}
+
+/*SEÇÃO ATLAS*/
+.atlas-post{
+    width: 100%;
+    height: 920px;
+    background-image: url('/assets/images/atlas.png');
+}
+.atlas-post h1{
+    text-align: center;
+    font-size: 80px;
+    font-family: "Jacques Francois", serif;
+    font-weight: 400;
+    padding-top: 400px;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+.atlas-content{
+    width: 95%;
+    margin-left: 30px;
+    height: 1600px;
+    background-color: #fff4e5;
+}
+.atlas-text{
+    margin-left: 130px;
+    width: 1000px;
+    height: 400px;
+}
+.atlas-text p{
+    padding-top: 30px;
+    text-indent: 1.25cm;
+    text-align: justify;
+    align-items: center;
+    font-family: "Inter", sans-serif;
+    color: #000;
+    font-weight: bold;
+    font-size: 20px;
+}
+.atlas-text img{
+    padding-top: 30px;
+    width: 1000px;
+    height: 400px;
+}
+/*FIM DA ÁREA PRINCIPAL*/
+
+/*INICIO ÁREA GALERIA*/
+.galeria-content{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    position: relative;
+    overflow: hidden; /* Impede que as imagens saiam da área visível */
+    height: 500px;
+}
+.carousel {
+    display: flex;
+    gap: 20px;
+    transition: transform 0.5s ease-in-out;
+}
+.carousel-image {
+    width: 1000px;
+    height: 200px;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+.carousel-image:hover {
+    transform: scale(1.1);
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 900px;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+.modal-content {
+    margin: 15% auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 10;
+}
+.prev {
+    left: 20px;
+}
+.next {
+    right: 20px;
+}
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+/*FIM ÁREA GALERIA*/
+
+/*INICIO DA ÁREA VIDEO*/
+.videomaps-content{
+    margin-top: 30px;
+    width: 95%;
+    margin-left: 30px;
+    height: 1800px;
+    background-color: #fff4e5;
+}
+.videomaps-text{
+    margin-left: 130px;
+    width: 1000px;
+    height: 400px;
+}
+.videomaps-text p{
+    padding-top: 30px;
+    text-indent: 1.25cm;
+    text-align: justify;
+    align-items: center;
+    font-family: "Inter", sans-serif;
+    color: #000;
+    font-weight: bold;
+    font-size: 20px;
+}
+.videomaps-text iframe{
+    padding-top: 30px;
+    width: 1000px;
+    height: 500px;
+}
+/*FIM DA ÁREA VIDEO*/
+
+/*INÍCIO DO FOOTER*/
+.footer-information{
+    width: 100%;
+    height: 150px;
+    text-align: center;
+    padding-top: 125px;
+    margin-top: -20px;
+    font-family: "Inter", sans-serif;
+    color: #fff;
+    background: #000;
+}
+/*FIM DO FOOTER*/
+
+/*pg feedback*/
+.container-feedback {
+    width: 70%;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.container-feedback h2 {
+    font-family: "Jaro", sans-serif;
+    font-weight: 400;
+    font-size: 50px;
+    color: #FF6200;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.container-feedback label {
+    font-family: "Jaro", sans-serif;
+    font-weight: 400;
+    font-size: 30px;
+    color: #333;
+}
+
+.container-feedback input{
+    width: 100%;
+    height: 70px;
+    border-radius: 5px;
+    background-color: #fff4e5;
+    border: none;
+    font-size: 20px;
+}
+.container-feedback textarea{
+    width: 100%;
+    height: 200px;
+    border-radius: 5px;
+    background-color: #fff4e5;
+    border: none;
+    font-size: 20px;
+}
+.container-feedback input:focus, textarea:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+
+.container-feedback button {
+    background-color: #007BFF;
+    font-family: "Jaro", sans-serif;
+    font-weight: 400;
+    font-size: 25px;
+    color: #fff;
+    border: none;
+    height: 100px;
+    border-radius: 100px;
+    cursor: pointer;
+    width: 30%;
+    margin-left: 350px;
+}
+
+.container-feedback button:hover {
+    background-color: #0056b3;
+}
+
+.error {
+    margin-top: 30px;
+    color: red;
+    font-size: 30px;
+    font-weight: bold;
+    background-color: #bbb;
+    text-align: center;
+}
+
+.success {
+    margin-top: 30px;
+    color: green;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+
+   
